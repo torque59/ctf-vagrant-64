@@ -16,6 +16,7 @@ I have changed the image to minimal/xenial64 which reduces the size of the overa
 - Capstone
 - binwalk
 - z3-solver
+- socat
 - Gef
 - Foremost
 - Pwndbg (Uncomment if required)
