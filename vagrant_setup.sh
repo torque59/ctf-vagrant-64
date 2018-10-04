@@ -1,5 +1,6 @@
 #!/bin/bash
 
+HOMEDIR=/home/vagrant
 # Updates
 sudo apt-get -y update
 
@@ -32,7 +33,7 @@ rm /etc/apt/sources.list.d/emdebian.list
 sudo apt-get -y install python2.7 python-pip python-dev git
 pip install pwntools
 
-cd
+cd $HOMEDIR
 mkdir tools
 cd tools
 
@@ -97,7 +98,7 @@ pip install angr --upgrade
 cd ~/tools/
 wget http://lcamtuf.coredump.cx/afl/releases/afl-latest.tgz
 tar -xvf afl-latest.tgz
-export afl_temp=$(tar -tvf afl-latest.tgz | head -n1 | cut -d':' -f2 | cut -d' ' -f2)
+afl_temp=$(tar -tvf afl-latest.tgz | head -n1 | cut -d':' -f2 | cut -d' ' -f2)
 cd $afl_temp
 make && sudo make install
 
