@@ -2,6 +2,11 @@
 
 This vagrant box is similar to https://github.com/ctfhacker/ctf-vagrant-64. It has couple of this which i have added to make things useful.
 
+I have changed the image to minimal/xenial64 and added couple of tools.
+
+## Base Image
+
+- minimal/xenial64
 
 ## Tools
 
@@ -11,3 +16,8 @@ This vagrant box is similar to https://github.com/ctfhacker/ctf-vagrant-64. It h
 - Gef
 - Pwndbg
 
+
+## Setup 
+
+- vagrant up
+- vagrant ssh
