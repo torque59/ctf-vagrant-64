@@ -14,8 +14,11 @@ I have changed the image to minimal/xenial64 and added couple of tools.
 - AFL Latest
 - Radare (r2dec is pre-installed :D )
 - Capstone
+- binwalk
 - Gef
+- Foremost
 - Pwndbg (Uncomment if required)
+- nmap
 
 ## Setup
 

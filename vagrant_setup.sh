@@ -105,3 +105,7 @@ wget -q -O- https://github.com/hugsy/gef/raw/master/scripts/gef.sh | sh
 r2pm init
 r2pm update
 r2pm install r2dec
+
+# Install nmap
+sudo apt-get install -y nmap
+
