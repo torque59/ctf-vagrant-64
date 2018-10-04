@@ -100,3 +100,8 @@ make && sudo make install
 
 # Use GEF
 wget -q -O- https://github.com/hugsy/gef/raw/master/scripts/gef.sh | sh
+
+# Installing r2dec
+r2pm init
+r2pm update
+r2pm install r2dec
