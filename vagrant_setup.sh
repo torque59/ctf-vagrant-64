@@ -56,6 +56,9 @@ git clone https://github.com/radare/radare2
 cd radare2
 ./sys/install.sh
 
+# Install z3-solver
+pip install z3-solver
+
 # Install binwalk
 cd
 git clone https://github.com/devttys0/binwalk

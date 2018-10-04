@@ -15,6 +15,7 @@ I have changed the image to minimal/xenial64 and added couple of tools.
 - Radare (r2dec is pre-installed :D )
 - Capstone
 - binwalk
+- z3-solver
 - Gef
 - Foremost
 - Pwndbg (Uncomment if required)
