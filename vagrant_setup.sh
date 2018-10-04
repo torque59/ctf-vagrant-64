@@ -5,6 +5,7 @@ HOMEDIR=/home/vagrant
 sudo apt-get -y update
 
 sudo apt-get -y install python3-pip
+sudo apt-get -y install cmake
 sudo apt-get -y install tmux
 sudo apt-get -y install gdb gdb-multiarch
 sudo apt-get -y install unzip
@@ -101,6 +102,10 @@ tar -xvf afl-latest.tgz
 afl_temp=$(tar -tvf afl-latest.tgz | head -n1 | cut -d':' -f2 | cut -d' ' -f2)
 cd $afl_temp
 make && sudo make install
+
+# Install ropper for gef
+
+pip3 install ropper
 
 # Use GEF
 wget -q -O- https://github.com/hugsy/gef/raw/master/scripts/gef.sh | sh
