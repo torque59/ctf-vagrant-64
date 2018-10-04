@@ -6,10 +6,12 @@ sudo apt-get -y update
 
 sudo apt-get -y install python3-pip
 sudo apt-get -y install cmake
+sudo apt-get -y install socat
 sudo apt-get -y install tmux
 sudo apt-get -y install gdb gdb-multiarch
 sudo apt-get -y install unzip
 sudo apt-get -y install foremost
+apt-get install -y pkg-config
 
 # QEMU with MIPS/ARM - http://reverseengineering.stackexchange.com/questions/8829/cross-debugging-for-mips-elf-with-qemu-toolchain
 sudo apt-get -y install qemu qemu-user qemu-user-static
@@ -58,6 +60,9 @@ git clone https://github.com/radare/radare2
 cd radare2
 ./sys/install.sh
 
+# Install r2pipe
+pip install r2-pipe
+
 # Install z3-solver
 pip install z3-solver
 
@@ -103,12 +108,15 @@ afl_temp=$(tar -tvf afl-latest.tgz | head -n1 | cut -d':' -f2 | cut -d' ' -f2)
 cd $afl_temp
 make && sudo make install
 
-# Install ropper for gef
-
-pip3 install ropper
+sudo ldconfig
 
 # Use GEF
 wget -q -O- https://github.com/hugsy/gef/raw/master/scripts/gef.sh | sh
+
+# Install ropper, unicorn and keystone for gef
+pip3 install ropper
+pip3 install --user --no-cache-dir keystone-engine
+pip3 install unicorn
 
 # Installing r2dec
 r2pm init
