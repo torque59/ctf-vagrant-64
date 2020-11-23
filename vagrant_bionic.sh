@@ -19,6 +19,7 @@ sudo apt-get -y install gdb gdb-multiarch
 sudo apt-get -y install unzip
 sudo apt-get -y install foremost
 sudo apt-get -y install pkg-config git neovim curl fish
+sudo snap install --channel=15/stable --classic node
 
 
 cd $TOOLS
